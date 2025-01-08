@@ -1,0 +1,92 @@
+/* Barra de navegación */
+.navbar {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 60px; /* Espacio para la barra de navegación */
+  position: relative;
+}
+
+/* Contenedor del mapa */
+#map-container {
+  width: 100%;
+  height: calc(100vh - 60px);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+}
+
+/* Formulario flotante */
+.floating-form {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.floating-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-form label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.floating-form input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.floating-form button {
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.floating-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .floating-form {
+    width: 90%;
+    left: 5%;
+    top: 10px;
+  }
+}
