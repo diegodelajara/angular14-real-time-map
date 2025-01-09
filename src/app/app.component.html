@@ -4,19 +4,12 @@
 
 <div class="container">
   <div id="map-container">
-    <google-map
-      height="100%"
-      width="100%"
-      [center]="center"
-      [zoom]="zoom">
-      <map-marker
-        *ngFor="let marker of markers"
-        [position]="marker">
+    <google-map height="100%" width="100%" [center]="center" [zoom]="zoom">
+      <map-marker *ngFor="let marker of markers" [position]="marker">
       </map-marker>
     </google-map>
   </div>
 
-  <!-- Formulario flotante -->
   <div class="floating-form">
     <form (ngSubmit)="searchAddress()">
       <label for="address">Buscar dirección</label>
@@ -26,7 +19,8 @@
         [(ngModel)]="address"
         name="address"
         placeholder="Escribe una dirección"
-        required />
+        required
+      />
       <button type="submit">Agregar marcador</button>
     </form>
   </div>
